@@ -1,28 +1,31 @@
 // server.js
 const express = require('express');
-const mysql = require('mysql2');
+// const mysql = require('mysql2');
 const app = express();
-// const path = require('path')  //other method
+// // const path = require('path')  //other method
 
-const pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'post'
-});
+// const pool = mysql.createPool({
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'root',
+//     database: 'post'
+// });
 
+app.get('/', function (req, res) {
+    res.send('index')
+  });
 
-app.use(express.json());
-app.use(express.static('public'));
+// app.use(express.json());
+// app.use(express.static('public'));
 
 // app.get('/', function (req, res) {
 //     res.render('index')
 //   });
 
-app.get('/', (req, res) => {
-    // Send your HTML file
-    res.sendFile(__dirname + '/index.html');  //directly calling the html file
-});
+// app.get('/', (req, res) => {
+//     // Send your HTML file
+//     res.sendFile(__dirname + '/index.html');  //directly calling the html file
+// });
 
 // app.get('/example', (req, res) => {
 //     // Send your HTML file
@@ -31,17 +34,17 @@ app.get('/', (req, res) => {
 
 
 // Insert data
-app.post('/posts/add', (req, res) => {
-    const { content } = req.body;
-    pool.query('INSERT INTO post (content) VALUES (?)', [content], (err, results) => {
-        if (err) {
-            console.log(err);
-            res.status(500).json({ error: 'Internal Server Errqor' });
-            return;
-        }
-        res.json({ message: 'Data inserted successfully' });
-    });
-});
+// app.post('/posts/add', (req, res) => {
+//     const { content } = req.body;
+//     pool.query('INSERT INTO post (content) VALUES (?)', [content], (err, results) => {
+//         if (err) {
+//             console.log(err);
+//             res.status(500).json({ error: 'Internal Server Errqor' });
+//             return;
+//         }
+//         res.json({ message: 'Data inserted successfully' });
+//     });
+// });
 
 // Select all data
 app.get('/posts', (req, res) => {
