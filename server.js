@@ -5,7 +5,7 @@ const app = express();
 // // const path = require('path')  //other method
 
 // const pool = mysql.createPool({
-//     host: 'localhost',
+//     host: 'localhost', 
 //     user: 'root',
 //     password: 'root',
 //     database: 'post'
