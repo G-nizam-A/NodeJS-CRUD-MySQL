@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Interaction</title>
+</head>
+<body>
+    <h1>Post Management</h1>
+
+    <!-- Form to add new content -->
+    <form id="addForm">
+        <input type="text" id="name" placeholder="Name">
+        <input type="number" id="phone" placeholder="Phone">
+        <button type="submit">Add Post</button>
+    </form>
+
+    <h2>All Posts</h2>
+    <ul id="allPosts"></ul>
+
+    <h2>Get Post by ID</h2>
+    <form id="getPostForm">
+        <input type="number" id="postId" placeholder="Post ID">
+        <button type="submit">Get Post</button>
+    </form>
+    <div id="singlePost"></div>
+
+    <h2>Update Post by ID</h2>
+    <form id="updateForm">
+        <input type="number" id="updateId" placeholder="Post ID">
+        <input type="text" id="updateName" placeholder="Updated Name">
+        <input type="text" id="updatePhone" placeholder="Updated Phone">
+        <button type="submit">Update Post</button>
+    </form>
+
+    <h2>Delete Post by ID</h2>
+    <form id="deleteForm">
+        <input type="number" id="deleteId" placeholder="Post ID">
+        <button type="submit">Delete Post</button>
+    </form>
+</body>
+<script src="./script.js"></script>
+</html>
