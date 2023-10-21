@@ -25,14 +25,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');  //directly calling the html file
 });
 
-app.get('/contact', (req, res) => {
-    res.sendFile(__dirname + '/contact-form.html'); 
-});
-
-// app.get('/table', (req, res) => {
-//     res.sendFile(__dirname + '/contact-form.html'); 
-// });
-
 // app.get('/example', (req, res) => {
 //     // Send your HTML file
 //     res.sendFile(path.join(__dirname,'/index.html'));  //using path  calling the html file
