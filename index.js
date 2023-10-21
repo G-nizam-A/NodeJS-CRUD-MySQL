@@ -6,10 +6,10 @@ const mysql = require('mysql2');
 // const path = require('path')  
 
 const pool = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE,
+    host: 'localhost',  
+    user: 'root', 
+    password: 'root',
+    database: 'post'
 });
 pool.getConnection((err, connection) => {
     if (err) {
@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
     });
 });
 
-const port = process.env.PORT | 3000;
+const port = process.env.PORT | 3002;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
